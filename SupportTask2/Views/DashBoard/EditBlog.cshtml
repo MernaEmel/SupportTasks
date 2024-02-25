@@ -17,6 +17,7 @@
                            asp-for="Title"
                            value="@Model.Title"
                            placeholder="" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
                            
 
                 </div>
@@ -28,7 +29,21 @@
                               placeholder="">
                            @Model.Description
                           </textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
+                <div class="mb-3 col-lg-6">
+                    <label asp-for="profit" class="form-label">Profit</label>
+                    <input type="number"
+                           asp-for="profit"
+                           class="form-control"
+                           value="@Model.profit"
+                           placeholder=""></input>
+                </div>
+                <div class="mb-3 col-lg-12 ">
+                    <div class="form-check">
+                        <input asp-for="IsFree" class="form-check-input" type="checkbox" value="@Model.IsFree" id="" />
+                        <label asp-for="IsFree" class="form-check-label" for=""> Free </label>
+                    </div>
 
 
                 <div class="mb-3 col-lg-6">
@@ -40,24 +55,25 @@
                             {
 
                                 <option >Select one</option>
-                                <option selected value="1">action</option>
+                                    <option selected value="1">Romantic</option>
                                 <option value="2"> comedy</option>
                             }
                             else if (Model.TypeId == 2)
                             {
                                 <option>Select one</option>
-                                <option value="1">action</option>
+                                <option value="1">Romantic</option>
                                 <option selected value="2"> comedy</option>
                             }
                             else
                             {
                                 <option selected>Select one</option>
-                                <option value="1">action</option>
+                                <option value="1">Romantic</option>
                                 <option value="2">comedy</option>
                             }
                         }
                      
                     </select>
+                    <span asp-validation-for="TypeId" class="text-danger"></span>
                 </div>
 
 
