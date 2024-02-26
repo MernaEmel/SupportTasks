@@ -38,10 +38,11 @@
                            class="form-control"
                            value="@Model.profit"
                            placeholder=""></input>
+                    <span asp-validation-for="profit" class="text-danger"></span>
                 </div>
                 <div class="mb-3 col-lg-12 ">
                     <div class="form-check">
-                        <input asp-for="IsFree" class="form-check-input" type="checkbox" value="@Model.IsFree" id="" />
+                        <input asp-for="IsFree" class="form-check-input" type="checkbox"  />
                         <label asp-for="IsFree" class="form-check-label" for=""> Free </label>
                     </div>
 
@@ -55,19 +56,19 @@
                             {
 
                                 <option >Select one</option>
-                                    <option selected value="1">Romantic</option>
+                                    <option selected value="1">action</option>
                                 <option value="2"> comedy</option>
                             }
                             else if (Model.TypeId == 2)
                             {
                                 <option>Select one</option>
-                                <option value="1">Romantic</option>
+                                <option value="1">action</option>
                                 <option selected value="2"> comedy</option>
                             }
                             else
                             {
                                 <option selected>Select one</option>
-                                <option value="1">Romantic</option>
+                                <option value="1">action</option>
                                 <option value="2">comedy</option>
                             }
                         }
