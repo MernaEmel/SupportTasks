@@ -13,7 +13,5 @@ namespace SupportTask2.Models
         [ForeignKey("TypeId")]
         public BlogType Type { get; set; } 
 
-
-
     }
 }
